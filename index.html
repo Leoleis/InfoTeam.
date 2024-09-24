@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoTeam GmbH</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styling */
+        .navbar {
+            background-color: #0056b3;
+            padding: 10px 0;
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+            margin-right: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            float: right;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-left: 15px;
+        }
+
+        /* Main content styling */
+        .video-container, .article-container {
+            padding: 20px;
+            background-color: #f8f9fa;
+            margin-bottom: 20px;
+        }
+
+        .podcast-container {
+            background-color: #e9ecef;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footer a {
+            color: white;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">InfoTeam GmbH</a>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Suchen</button>
+            </form>
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Navigation section -->
+    <div class="container">
+        <nav class="nav">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Über uns</a>
+            <a class="nav-link" href="#">Artikel</a>
+            <a class="nav-link" href="#">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- Main content section -->
+    <div class="container main-content">
+        <div class="row">
+            <!-- Video Section -->
+            <div class="col-md-6 video-container">
+                <h2>Unser Video</h2>
+                <div>
+                    <video width="100%" controls>
+                        <source src="video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Podcast Section -->
+            <div class="col-md-6 podcast-container">
+                <a href="./Tilgungsplan.html">Tilgungsrechner</a>
+            </div>
+        </div>
+
+        <!-- Article Section -->
+        <div class="row article-container">
+            <div class="col-12">
+                <h2>Ein spannender Artikel</h2>
+                <p>Dieser Artikel behandelt ein sehr interessantes Thema und bietet viele wertvolle Informationen. Lesen Sie weiter, um mehr über dieses spannende Thema zu erfahren.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <p>© 2024 Meine Webseite</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

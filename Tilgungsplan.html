@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)https://moodle.leo-statz-berufskolleg.de/pluginfile.php/489733/mod_resource/content/0/tilgungsplan_vorlage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tilgungsplan</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="./Tilgungsplan_files/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+     <div id="ausgabe"><table><thead><tr><th>Jahr</th><th>Rj</th><th>Zj</th><th>r</th><th>Rj + 1</th></tr></thead><tbody></tbody></table></div>
+    <script>
+        function tilgungsplan() {
+            
+            var jahr = parseInt(document.getElementById("laufzeit").value);
+            var Schuld = parseFloat(document.getElementById("Schuld").value);
+            var zins = parseFloat(document.getElementById("zins").value);
+            var Annuität = parseInt(document.getElementById("Annuität").value);
+            var Tilgung = parseInt(document.getElementById("Tilgung").value);
+            var Restschuld = parseInt(document.getElementById("Restschuld").value);
+            var i = 1;
+
+            var ausgabe = '<table><thead><tr><th>Jahr</th><th>Schuld in €</th><th>Zinsen in €</th><th>Annuität in €</th><th>Tilgung in €</th><th>Restschuld in €</th></tr></thead><tbody>';
+
+             
+
+           while( i <= jahr) {
+               Schuld=Schuld;
+               zins=Schuld*zins;
+               Annuität=Schuld*Math.pow(zins*(1+zins)jahr)/(1+zins)jahr-1;
+               Tilgung=Annuität-zins;
+               Restschuld=Schuld-Tilgung;
+               Schuld=Restschuld;
+
+               
+               
+
+               
+                ausgabe += '<tr><td>' + i + '</td><td>' + jahr.toFixed(2) + '</td><td>' + .toFixed(2) + '</td><td>' + r.toFixed(2) + '</td><td>' + rj.toFixed(2) + '</td></tr>';
+            }
+            i++;
+
+            ausgabe += '</tbody></table>';
+            document.getElementById('ausgabe').innerHTML = ausgabe;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Tilgungsplan</h1>
+        <div class="form-group">
+            <label for="ID_Kreditsumme">Kreditbetrag:</label>
+            <input type="text" id="ID_Kreditsumme" class="form-control" value="400000">
+        </div>
+        <div class="form-group">
+            <label for="ID_Laufzeit">Laufzeit (Jahre):</label>
+            <input type="text" id="ID_Laufzeit" class="form-control" value="20">
+        </div>
+        <div class="form-group">
+            <label for="ID_Zinssatz">Zinssatz (%):</label>
+            <input type="text" id="ID_Zinssatz" class="form-control" value="5">
+        </div>
+        <button class="btn btn-primary" onclick="tilgungsplan();">Berechne</button>
+        <div id="ID_Output" class="mt-4"></div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="./Tilgungsplan_files/jquery-3.5.1.slim.min.js.Download"></script>
+    <script src="./Tilgungsplan_files/popper.min.js.Download"></script>
+    <script src="./Tilgungsplan_files/bootstrap.min.js.Download"></script>
+
+
+</body></html>
